@@ -10,6 +10,10 @@ Deployed on AWS EC2
 ```
 http://localhost:7000/api
 ```
+- Or:
+```
+http://3.25.95.38/api/
+```
 
 ## Endpoints
 
