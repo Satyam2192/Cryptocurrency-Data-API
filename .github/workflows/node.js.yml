@@ -40,7 +40,7 @@ jobs:
     - name: Health check
       run: |
         sleep 10  # Give the application some time to start up
-        response=$(curl -sS http://localhost:7000/health || echo "Failed to connect")
+        response=$(curl -sS http://localhost:7000/api/stats?coin=bitcoin || echo "Failed to connect")
         if [[ $response == *"OK"* ]]; then
           echo "Application is healthy"
         else
