@@ -41,13 +41,14 @@ jobs:
       run: |
         sleep 10  # Give the application some time to start up
         response=$(curl -sS http://localhost:7000/api/stats?coin=bitcoin || echo "Failed to connect")
-        if [[ $response == *"OK"* ]]; then
+        if [[ $response == *"price"* && $response == *"marketCap"* && $response == *"24hChange"* ]]; then
           echo "Application is healthy"
         else
           echo "Application health check failed"
           echo "Response: $response"
           exit 1
         fi
+    
 
     - name: Cleanup
       if: always()
