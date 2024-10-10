@@ -2,6 +2,9 @@
 
 This API provides endpoints to fetch cryptocurrency data and calculate price deviations.
 
+Deployed on AWS EC2
+`http://3.25.95.38/api/`
+
 ## Base URL
 
 ```
