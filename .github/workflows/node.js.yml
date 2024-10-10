@@ -21,13 +21,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     
-    - name: Debug Information
-      run: |
-        echo "Current directory: $(pwd)"
-        echo "Directory contents: $(ls -la)"
-        echo "Node version: $(node -v)"
-        echo "NPM version: $(npm -v)"
-    
     - name: Install dependencies
       run: npm install
     
@@ -43,9 +36,20 @@ jobs:
     
     - name: Check PM2 status
       run: pm2 list
-
-    - name: Run tests (if available)
-      run: npm test || echo "No test script found, skipping tests"
     
-    - name: Start application (if not already running)
-      run: pm2 start index.js --name Backend || echo "Backend already running"
+    - name: Health check
+      run: |
+        sleep 10  # Give the application some time to start up
+        response=$(curl -sS http://localhost:7000/health || echo "Failed to connect")
+        if [[ $response == *"OK"* ]]; then
+          echo "Application is healthy"
+        else
+          echo "Application health check failed"
+          echo "Response: $response"
+          exit 1
+        fi
+
+    - name: Cleanup
+      if: always()
+      run: |
+        pm2 save
