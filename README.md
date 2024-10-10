@@ -2,7 +2,7 @@
 
 This API provides endpoints to fetch cryptocurrency data and calculate price deviations.
 
-Deployed on AWS EC2: [AWS: http://3.25.95.38/api](http://3.25.95.38/api)
+Deployed on AWS EC2: [AWS: http://3.25.95.38/api/stats?coin=bitcoin](http://3.25.95.38/api/stats?coin=bitcoin)
 
 **Postman Documentation:** [Cryptocurrency Data API Documentation](https://dark-satellite-379351.postman.co/workspace/7d3d576c-5a1b-4446-9ea2-450401b4ed21/documentation/31555061-9675d3a2-2ad5-4424-9ee8-84cf320e896b)
 
