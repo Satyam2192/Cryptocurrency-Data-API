@@ -2,8 +2,11 @@
 
 This API provides endpoints to fetch cryptocurrency data and calculate price deviations.
 
-Deployed on AWS EC2
+Deployed on AWS EC2:
 ```http://3.25.95.38/api```
+
+Postman Documentation: ```https://dark-satellite-379351.postman.co/workspace/7d3d576c-5a1b-4446-9ea2-450401b4ed21/documentation/31555061-9675d3a2-2ad5-4424-9ee8-84cf320e896b```
+**Postman Documentation:** [Dark Satellite Workspace Documentation](https://dark-satellite-379351.postman.co/workspace/7d3d576c-5a1b-4446-9ea2-450401b4ed21/documentation/31555061-9675d3a2-2ad5-4424-9ee8-84cf320e896b)
 
 ## Base URL
 
