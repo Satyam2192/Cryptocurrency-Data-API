@@ -33,8 +33,8 @@ app.use(express.json({ limit: '50mb' }));
 app.use(cookieParser());
 
 // Routes Mount
-app.use("/stats", statsRoute);
-app.use("/deviation", deviationRoute);
+app.use("/api/stats", statsRoute);
+app.use("/api/deviation", deviationRoute);
 
 // job to run every 2 hours
 cron.schedule("0 */2 * * *", fetchAndStoreCryptoData); 

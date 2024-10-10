@@ -5,7 +5,7 @@ This API provides endpoints to fetch cryptocurrency data and calculate price dev
 ## Base URL
 
 ```
-http://localhost:7000
+http://localhost:7000/api
 ```
 
 ## Endpoints
